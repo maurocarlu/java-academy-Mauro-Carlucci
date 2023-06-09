@@ -2,7 +2,7 @@ package esercizio2;
 
 import java.util.Scanner;
 
-public class mainTest {
+public class MainTest {
 
 	public static void main(String[] args) {
 		int vEsame = 0;

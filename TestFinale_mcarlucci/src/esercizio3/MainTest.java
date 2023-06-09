@@ -2,7 +2,7 @@ package esercizio3;
 
 import esercizio3.implementazione.Calciatore;
 
-public class mainTest {
+public class MainTest {
 
 	public static void main(String[] args) {
 		Calciatore calciatore = new Calciatore("Mauro", "Carlucci", 2002, "Brindisi", "Juve", "ATT", 1000, 5, 12000);
