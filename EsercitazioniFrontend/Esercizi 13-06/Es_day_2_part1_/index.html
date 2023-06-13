@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Esercizi Javascript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        button {
+            background-color: #66af4c; /* Green */
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #4c61af;
+            color: white;
+        }
+        .pButton {
+            text-align: center;
+        }
+        .h3Soluzione {
+            text-align: center;
+        }
+    </style> 
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Esercizi in javascript</h1>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 1</h3>
+      <p>Calcola la somma di due numeri e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 1</h3>
+        <p class="pButton"><button onclick=somma(5,4);somma(9,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+        <h3>Esercizio 2</h3>
+        <p>Calcola la differenza di due numeri e stampa il risultato a console</p>
+        <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 2</h3>
+        <p class="pButton"><button onclick=sottrazione(3,2);sottrazione(3,3)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 3</h3>
+      <p>Moltiplica due numeri e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 3</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 4</h3>
+      <p>Divide due numeri e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 4</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 5</h3>
+      <p>Calcola il resto della divisione tra due numeri e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 5</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 6</h3>
+      <p>Calcola la media aritmetica di un insieme di numeri e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 6</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 7</h3>
+      <p>Verifica se un numero è pari o dispari e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 7</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 8</h3>
+      <p>Verifica se un numero è maggiore, minore o uguale a un altro numero</p>
+      <p>e stampa il risultato a console</p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 8</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 9</h3>
+      <p>Verifica se una stringa è vuota o meno e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 9</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 10</h3>
+      <p>Verifica se una stringa contiene una determinata sottostringa e stampa</p>
+      <p>il risultato a console</p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 10</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 11</h3>
+      <p>Verifica se una lettera è una vocale o una consonante e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 11</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 12</h3>
+      <p>Verifica se un numero è divisibile per 3, per 5 o entrambi e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 12</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 13</h3>
+      <p>Crea un array di numeri interi e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 13</h3>
+      <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+      <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 14</h3>
+      <p>Cerca un elemento in un array e stampa se è stato trovato o meno</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 14</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 15</h3>
+      <p>unisce due array in un unico array e stampa il risultato a console</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 15</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 16</h3>
+      <p>estrae un sotto-array da un array (ad esempio solo i numeri pari)</p>
+      <p> e stampa il risultato a console.</p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 16</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 17</h3>
+      <p>utilizza la funzione .filter() per prendere solo gli elementi maggiori di 5 </p>
+      <p>in array di 10 numeri</p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 17</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 18</h3>
+      <p>crea un oggetto con alcune proprietà e stampa il risultato a console.</p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 18</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 19</h3>
+      <p>accede a una proprietà di un oggetto e stampa il valore a console.</p>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 19</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 20</h3>
+      <p>modifica il valore di una proprietà di un oggetto</p>
+      <p>e stampa il risultato a console, prima e dopo la modifica.</p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 20</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 21</h3>
+      <p>invoca una sotto funzione che accetta due numeri e restituisce la loro somma.</p>
+      <p>Stampa il risultato del return nella console.</p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 21</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 22</h3>
+      <p>invoca una sotto funzione che accetta un numero e restituisce il suo valore raddoppiato.</p>
+      <p>Stampa il risultato del return nella console.</p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 22</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Esercizio 23</h3>
+      <p>invoca una sotto funzione che accetta una stringa e restituisce la sua lunghezza.</p>
+      <p>Stampa il risultato del return nella console.</p>
+    </div>
+    <div class="col-sm-6">
+        <h3 class="h3Soluzione">Soluzione 23</h3>
+        <p class="pButton"><button onclick=somma(5,4)>Esegui</button></p>
+        <p></p>
+    </div>
+  </div>
+</div>
+<script src="funzioni.js"></script>
+</body>
+</html>
