@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "data": {
+        "specializzazione": "Design",
+        "ambito": {
+            "contesto": "Enterprise"
+        }
+    }
+}
