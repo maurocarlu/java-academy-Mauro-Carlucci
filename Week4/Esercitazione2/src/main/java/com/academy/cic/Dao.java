@@ -8,6 +8,7 @@ import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -38,7 +39,7 @@ public class Dao {
 	   
 		try {
 			tx = session.beginTransaction();
-			session.persist(modulo); 
+			session.save(modulo); 
 			tx.commit();
 		} catch (HibernateException e) {
 			if (tx!=null) tx.rollback();
@@ -52,7 +53,9 @@ public class Dao {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Course course = null;
         try {
-        	course = session.get(Course.class, name);
+            Query<Course> query = session.createQuery("FROM Course WHERE name = :courseName", Course.class);
+            query.setParameter("courseName", name);
+            course = query.uniqueResult();
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -60,6 +63,9 @@ public class Dao {
         }
         return course;
     }
+
+    
+    
 
     public void addModuleToCourse(Module module, int courseId) {
         Session session = HibernateUtil.getSessionFactory().openSession();
