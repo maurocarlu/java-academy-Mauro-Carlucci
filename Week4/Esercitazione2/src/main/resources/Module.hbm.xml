@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.academy.cic.model.Module" table="module">
+        <id name="module_id" column="module_id">
+            <generator class="native"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="teacher" column="teacher" type="string"/>
+        <!--   <many-to-one name="course_id" class="Course" column="course_id"/> -->
+    </class>
+</hibernate-mapping>
