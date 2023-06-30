@@ -35,7 +35,8 @@ private static Dao dao;
 		Executable executable = () -> service.insertModuleInCourse(1,modulo);
 		
 		EntityNotFoundException e = assertThrows(EntityNotFoundException.class, executable);
-		assertEquals("Apartment with id 1 not found", e.getMessage());
+		assertEquals(""
+				+ "course with id 1 not found", e.getMessage());
 	}
 	
 	@Test
