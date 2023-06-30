@@ -17,6 +17,9 @@ public class Course {
 	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
 	private List<Registration> registrations;
 
+	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<Module> modules;
+
 	public Course() {
 	}
 
@@ -44,10 +47,18 @@ public class Course {
 		this.registrations = registrations;
 	}
 
-	@Override
-	public String toString() {
-		return "Course [id=" + id + ", name=" + name +"]";
+	public List<Module> getModules() {
+		return modules;
+	}
+
+	public void setModules(List<Module> modules) {
+		this.modules = modules;
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", name=" + name + "moduli= " + modules.toString() + "]";
+	}
+
 }

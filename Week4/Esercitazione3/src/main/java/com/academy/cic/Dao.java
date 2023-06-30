@@ -2,6 +2,7 @@ package com.academy.cic;
 
 import com.academy.cic.util.JpaUtil;
 import com.academy.cic.entity.*;
+import com.academy.cic.entity.Module;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -36,6 +37,14 @@ public class Dao {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();
         entityManager.persist(registration);
+        entityManager.getTransaction().commit();
+        entityManager.close();
+    }
+    
+    public void insertModule(Module modulo) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(modulo);
         entityManager.getTransaction().commit();
         entityManager.close();
     }
@@ -101,5 +110,54 @@ public class Dao {
 
         entityManager.close();
     }
+    
+    public Course findCourseWithModules(int courseId) {
+    	EntityManager entityManager = entityManagerFactory.createEntityManager();
+        Course course = entityManager.find(Course.class, courseId);
+        if (course != null) {
+            course.getModules().size();
+        }
+        entityManager.close();
+        return course;
+    }
+    
+    public List<Module> findModulesByCourseId(int courseId) {
+    	EntityManager entityManager = entityManagerFactory.createEntityManager();
+    	List<Module> moduli;
+        TypedQuery<Module> query = entityManager.createQuery("SELECT m FROM Module m WHERE m.course.id = :courseId", Module.class);
+        query.setParameter("courseId", courseId);
+        moduli = query.getResultList();
+        entityManager.close();
+        return moduli;
+    }
+    
+    public Course findCourse(int courseid) {
+		EntityManager entityManager = JpaUtil.getEntityManagerFactory().createEntityManager();
+		Course corso = null;
+		try {
+			corso = entityManager.find(Course.class, courseid);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			entityManager.close(); 
+		}
+		return corso;
+	}
+    
+    public Course updateCourse(Course corso) {
+		EntityManager entityManager = JpaUtil.getEntityManagerFactory().createEntityManager();
+		Course updatedCourse = null;
+		try {
+			entityManager.getTransaction().begin();
+			updatedCourse = entityManager.merge(corso);
+			entityManager.getTransaction().commit();
+		} catch (Exception e) {
+			entityManager.getTransaction().rollback();
+			e.printStackTrace();
+		} finally {
+			entityManager.close(); 
+		}
+		return updatedCourse;
+	}
 
 }
